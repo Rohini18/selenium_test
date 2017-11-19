@@ -31,15 +31,15 @@ public class RegisterAutomation {
 	@BeforeClass
 	public void initializeDriver() {
 		// Automation testing without browser or UI
-		driver = new HtmlUnitDriver(true);
+		//driver = new HtmlUnitDriver(true);
 
 		// Below code is to test your application with chrome browser
-		/*
-		 * System.setProperty("webdriver.chrome.driver",
-		 * "D://IMPC0989_D//MavenTest//MavenSrpingMVC_Selenium//chromedriver.exe");
-		 * driver = new ChromeDriver();
-		 */
-		// driver.get("http://localhost:8080/LoginProject/login.html");
+		
+		  System.setProperty("webdriver.chrome.driver",
+		  "E:\\jenkins\\batchfile\\Batches-master//chromedriver.exe");
+		  driver = new ChromeDriver();
+		 
+		 driver.get("http://localhost:7070/mavenspring/login.html");
 
 	}
 

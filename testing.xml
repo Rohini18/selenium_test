@@ -6,12 +6,12 @@
  </listeners>
 <test name="testlogin">
 <classes>
-<class name="LoginAutomation" />
+<class name="com.htc.test.LoginAutomation" />
 </classes>
 </test>
 <test name="testregistration">
 <classes>
-<class name="RegisterAutomation" />
+<class name="com.htc.test.RegisterAutomation" />
 </classes>
 </test>
 </suite>

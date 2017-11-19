@@ -4,32 +4,13 @@
   <listeners>
     <listener class-name="org.testng.reporters.EmailableReporter2"/>
   </listeners>
-  <test name="testlogin(failed)">
-    <classes>
-      <class name="com.htc.test.LoginAutomation">
-        <methods>
-          <include name="testSuccessLoginLogout"/>
-          <include name="initializeDriver"/>
-        </methods>
-      </class> <!-- com.htc.test.LoginAutomation -->
-      <class name="com.htc.test.RegisterAutomation">
-        <methods>
-          <include name="initializeDriver"/>
-        </methods>
-      </class> <!-- com.htc.test.RegisterAutomation -->
-    </classes>
-  </test> <!-- testlogin(failed) -->
   <test name="testregistration(failed)">
     <classes>
-      <class name="com.htc.test.LoginAutomation">
-        <methods>
-          <include name="initializeDriver"/>
-        </methods>
-      </class> <!-- com.htc.test.LoginAutomation -->
       <class name="com.htc.test.RegisterAutomation">
         <methods>
-          <include name="testSuccessLoginLogout"/>
+          <include name="testSuccessLoginLogout" invocation-numbers="0 1"/>
           <include name="initializeDriver"/>
+          <include name="closedriver"/>
         </methods>
       </class> <!-- com.htc.test.RegisterAutomation -->
     </classes>

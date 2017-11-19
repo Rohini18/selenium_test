@@ -3,6 +3,7 @@ package com.htc.test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,13 +31,13 @@ public class LoginAutomation {
 	public void initializeDriver(){
 		
 		// Automation testing without browser or UI
-		driver=new HtmlUnitDriver(true);
+		//driver=new HtmlUnitDriver(true);
 		
 		// Below code is to test your application with chrome browser
-		/*
-		System.setProperty("webdriver.chrome.driver","D://IMPC0989_D//MavenTest//MavenSrpingMVC_Selenium//chromedriver.exe");
-		driver = new ChromeDriver();*/
-		//driver.get("http://localhost:8080/LoginProject/login.html");
+		
+		System.setProperty("webdriver.chrome.driver","E:\\jenkins\\batchfile\\Batches-master//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://localhost:7070/mavenspring/login.html");
 		
 	}
 	@AfterClass
